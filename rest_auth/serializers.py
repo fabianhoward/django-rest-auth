@@ -188,7 +188,8 @@ class PasswordResetSerializer(serializers.Serializer):
 
 class PasswordResetConfirmSerializer(serializers.Serializer):
     """
-    Serializer for requesting a password reset e-mail.
+    Serializer for validating a password reset request from
+    and changing the password from a password reset email.
     """
     new_password1 = serializers.CharField(max_length=128)
     new_password2 = serializers.CharField(max_length=128)
